@@ -3,7 +3,7 @@
 <!-- END TITLE -->
 
 <!-- BEGIN TOC -->
-> 7/3/2020, 3:35:30 PM
+> 7/22/2020, 9:46:09 PM
 
 - [0-hello-world](#0-hello-world)
 - [1-remove-from-array](#1-remove-from-array)
@@ -45,17 +45,11 @@ console.log(greeting); // 'Hello, World!'
 **Test Report**
 ```
 Started
-.F..F.
+......
 
-Failures:
-1) Hello says hello world
-.    Expected '' to equal 'Hello, World!'..
 
-2) Hello says hello toys
-.    Expected '' to equal 'Hello, toys!'..
-
-2 specs, 2 failures
-Finished in 0.009 seconds
+2 specs, 0 failures
+Finished in 0.01 seconds
 
 ```
 
@@ -68,37 +62,26 @@ Finished in 0.009 seconds
 
 <a name="removeFromArray"></a>
 
-## removeFromArray()
+## removeFromArray(arrOfNumbers, ...toRemove) ⇒ <code>Array.&lt;number&gt;</code>
+filters out all values that are strictly equal to toRemove
+returns a new array, does not modify arrOfNumbers
+
+
+**Returns**: <code>Array.&lt;number&gt;</code> - arrNew - the filtered numbers  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arrOfNumbers | <code>Array.&lt;number&gt;</code> | the numbers to filter |
+| ...toRemove | <code>number</code> | the number to remove |
 
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F.
+.....................
 
-Failures:
-1) removeFromArray removes a single value
-.    Expected undefined to equal [ 1, 2, 4 ]..
 
-2) removeFromArray removes multiple values
-.    Expected undefined to equal [ 1, 4 ]..
-
-3) removeFromArray ignores non present values
-.    Expected undefined to equal [ 1, 2, 3, 4 ]..
-
-4) removeFromArray ignores non present values, but still works
-.    Expected undefined to equal [ 1, 3, 4 ]..
-
-5) removeFromArray can remove all values
-.    Expected undefined to equal [  ]..
-
-6) removeFromArray works with strings
-.    Expected undefined to equal [ 2, 'ho' ]..
-
-7) removeFromArray only removes same type
-.    Expected undefined to equal [ 1, 2 ]..
-
-7 specs, 7 failures
-Finished in 0.008 seconds
+7 specs, 0 failures
+Finished in 0.007 seconds
 
 ```
 
@@ -111,37 +94,29 @@ Finished in 0.008 seconds
 
 <a name="repeatString"></a>
 
-## repeatString()
+## repeatString(toRepeat, times) ⇒ <code>string</code>
+* repeat a string a given number of times
 
+
+**Returns**: <code>string</code> - - the final string  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| toRepeat | <code>string</code> | the string to repeat; |
+| times | <code>number</code> | the number of times to repeat; |
+
+**Example**  
+```js
+repeatString('hey', 3) // returns 'heyheyhey'
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F.
+.....................
 
-Failures:
-1) repeatString repeats the string
-.    Expected undefined to equal 'heyheyhey'..
 
-2) repeatString repeats the string many times
-.    Expected undefined to equal 'heyheyheyheyheyheyheyheyheyhey'..
-
-3) repeatString repeats the string 1 times
-.    Expected undefined to equal 'hey'..
-
-4) repeatString repeats the string 0 times
-.    Expected undefined to equal ''..
-
-5) repeatString returns ERROR with negative numbers
-.    Expected undefined to equal 'ERROR'..
-
-6) repeatString repeats the string a random amount of times
-.    TypeError: Cannot read property 'match' of undefined.
-
-7) repeatString works with blank strings
-.    Expected undefined to equal ''..
-
-7 specs, 7 failures
-Finished in 0.007 seconds
+7 specs, 0 failures
+Finished in 0.006 seconds
 
 ```
 
@@ -154,27 +129,27 @@ Finished in 0.007 seconds
 
 <a name="reverseString"></a>
 
-## reverseString()
+## reverseString(str) ⇒ <code>string</code>
+reverse a string
 
+
+**Returns**: <code>string</code> - - the reversed string  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| str | <code>string</code> | the string to reverse; |
+
+**Example**  
+```js
+reverseString('hello there') // returns 'ereht olleh'
+```
 **Test Report**
 ```
 Started
-.F..F..F..F.
+............
 
-Failures:
-1) reverseString reverses single word
-.    Expected undefined to equal 'olleh'..
 
-2) reverseString reverses multiple words
-.    Expected undefined to equal 'ereht olleh'..
-
-3) reverseString works with numbers and punctuation
-.    Expected undefined to equal '!cba !321'..
-
-4) reverseString works with blank strings
-.    Expected undefined to equal ''..
-
-4 specs, 4 failures
+4 specs, 0 failures
 Finished in 0.003 seconds
 
 ```
@@ -188,33 +163,28 @@ Finished in 0.003 seconds
 
 <a name="sumAll"></a>
 
-## sumAll()
+## sumAll(num1, num2) ⇒ <code>number</code>
+The function takes 2 integers and returns the sum of every number between (and including) them.
 
+
+**Returns**: <code>number</code> - sum - the sum of the two integers;  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| num1 | <code>number</code> | the first integer; |
+| num2 | <code>number</code> | the first integer; |
+
+**Example**  
+```js
+sumAll(1, 4) // returns the sum of 1 + 2 + 3 + 4 which is 10
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F.
+..................
 
-Failures:
-1) sumAll sums numbers within the range
-.    Expected undefined to equal 10..
 
-2) sumAll works with large numbers
-.    Expected undefined to equal 8002000..
-
-3) sumAll works with larger number first
-.    Expected undefined to equal 7626..
-
-4) sumAll returns ERROR with negative numbers
-.    Expected undefined to equal 'ERROR'..
-
-5) sumAll returns ERROR with non-number parameters
-.    Expected undefined to equal 'ERROR'..
-
-6) sumAll returns ERROR with non-number parameters
-.    Expected undefined to equal 'ERROR'..
-
-6 specs, 6 failures
+6 specs, 0 failures
 Finished in 0.005 seconds
 
 ```
@@ -228,43 +198,28 @@ Finished in 0.005 seconds
 
 <a name="fibonacci"></a>
 
-## fibonacci()
+## fibonacci(num1) ⇒ <code>number</code>
+The function takes 1 integers and returns the member of the Fibonacci series.
 
+
+**Returns**: <code>number</code> - num - the member of the Fibonacci series;  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| num1 | <code>number</code> | the integer; |
+
+**Example**  
+```js
+fibonacci(10) // returns 55
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F..F..F.
+...........................
 
-Failures:
-1) fibonacci works
-.    Expected undefined to equal 3..
 
-2) fibonacci works
-.    Expected undefined to equal 8..
-
-3) fibonacci works
-.    Expected undefined to equal 55..
-
-4) fibonacci works
-.    Expected undefined to equal 610..
-
-5) fibonacci works
-.    Expected undefined to equal 75025..
-
-6) fibonacci doesn't accept negatives
-.    Expected undefined to equal 'OOPS'..
-
-7) fibonacci DOES accept strings
-.    Expected undefined to equal 1..
-
-8) fibonacci DOES accept strings
-.    Expected undefined to equal 1..
-
-9) fibonacci DOES accept strings
-.    Expected undefined to equal 21..
-
-9 specs, 9 failures
-Finished in 0.008 seconds
+9 specs, 0 failures
+Finished in 0.007 seconds
 
 ```
 
@@ -277,18 +232,27 @@ Finished in 0.008 seconds
 
 <a name="getTheTitles"></a>
 
-## getTheTitles()
+## getTheTitles(arr) ⇒ <code>array</code>
+It takes the array of objects and returns an array of specific properties of that objects
 
+
+**Returns**: <code>array</code> - answer - array of specific properties of the objects  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>array</code> | array of objects |
+
+**Example**  
+```js
+console.log(getTheTitles(books)); // ['Book1', 'Book2']
+```
 **Test Report**
 ```
 Started
-.F.
+...
 
-Failures:
-1) getTheTitles gets titles
-.    Expected undefined to equal [ 'Book', 'Book2' ]..
 
-1 spec, 1 failure
+1 spec, 0 failures
 Finished in 0.001 seconds
 
 ```
@@ -302,34 +266,28 @@ Finished in 0.001 seconds
 
 <a name="leapYears"></a>
 
-## leapYears()
+## leapYears(Year) ⇒ <code>Boolean</code>
+It receives a year and it answers if the year is or isn't leap.
 
+
+**Returns**: <code>Boolean</code> - answer - The answer of if the year is leap or not  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Year | <code>number</code> | the year to test |
+
+**Example**  
+```js
+console.log(leapYears(34992)) // returns true
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F.
+..................
 
-Failures:
-1) leapYears works with non century years
-.    Expected undefined to equal true..
 
-2) leapYears works with non century years
-.    Expected undefined to equal false..
-
-3) leapYears works with ridiculously futuristic non century years
-.    Expected undefined to equal true..
-
-4) leapYears works with century years
-.    Expected undefined to equal false..
-
-5) leapYears works with century years
-.    Expected undefined to equal true..
-
-6) leapYears works with century years
-.    Expected undefined to equal false..
-
-6 specs, 6 failures
-Finished in 0.005 seconds
+6 specs, 0 failures
+Finished in 0.006 seconds
 
 ```
 
@@ -342,30 +300,27 @@ Finished in 0.005 seconds
 
 <a name="palindromes"></a>
 
-## palindromes()
+## palindromes(str) ⇒ <code>Boolean</code>
+It receives a string and evaluates if it is a palindrome or not
 
+
+**Returns**: <code>Boolean</code> - answer - The answer if is palindrome or not  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| str | <code>string</code> | the string to be evaluate |
+
+**Example**  
+```js
+console.log(palindromes('Racecar!')) // returns true
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F.
+...............
 
-Failures:
-1) palindromes works with single words
-.    Expected undefined to equal true..
 
-2) palindromes works with punctuation
-.    Expected undefined to equal true..
-
-3) palindromes works with multiple words
-.    Expected undefined to equal true..
-
-4) palindromes works with multiple words
-.    Expected undefined to equal true..
-
-5) palindromes doesn't just always return true
-.    Expected undefined to equal false..
-
-5 specs, 5 failures
+5 specs, 0 failures
 Finished in 0.005 seconds
 
 ```
@@ -379,37 +334,29 @@ Finished in 0.005 seconds
 
 <a name="caesar"></a>
 
-## caesar()
+## caesar(str, amount) ⇒ <code>string</code>
+It receives a string and a integer to shift the string, such as the Caesar Cypher
 
+
+**Returns**: <code>string</code> - outpue - The string shifted.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| str | <code>string</code> | the string to be shifted |
+| amount | <code>number</code> | the amount of shifting that the string will receive |
+
+**Example**  
+```js
+console.log(caesar('Hello, World!', 5)) // returns 'Mjqqt, Btwqi!'
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F.
+.....................
 
-Failures:
-1) caesar works with single letters
-.    Expected undefined to equal 'B'..
 
-2) caesar works with words
-.    Expected undefined to equal 'Bbb'..
-
-3) caesar works with phrases
-.    Expected undefined to equal 'Mjqqt, Btwqi!'..
-
-4) caesar works with negative shift
-.    Expected undefined to equal 'Hello, World!'..
-
-5) caesar wraps
-.    Expected undefined to equal 'A'..
-
-6) caesar works with large shift factors
-.    Expected undefined to equal 'Ebiil, Tloia!'..
-
-7) caesar works with large negative shift factors
-.    Expected undefined to equal 'Ebiil, Tloia!'..
-
-7 specs, 7 failures
-Finished in 0.006 seconds
+7 specs, 0 failures
+Finished in 0.005 seconds
 
 ```
 
@@ -422,25 +369,28 @@ Finished in 0.006 seconds
 
 <a name="findTheOldest"></a>
 
-## findTheOldest()
+## findTheOldest(people) ⇒ <code>string</code>
+*It receives a object with information about people and returns the oldest person
 
+
+**Returns**: <code>string</code> - output - The oldest person.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| people | <code>object</code> | the object with the people |
+
+**Example**  
+```js
+console.log(findTheOldest(people).name) // returns 'Ray'
+```
 **Test Report**
 ```
 Started
-.F..F..F.
+.........
 
-Failures:
-1) findTheOldest finds the oldest person!
-.    TypeError: Cannot read property 'name' of undefined.
 
-2) findTheOldest finds the oldest person if someone is still living
-.    TypeError: Cannot read property 'name' of undefined.
-
-3) findTheOldest finds the oldest person if the OLDEST is still living
-.    TypeError: Cannot read property 'name' of undefined.
-
-3 specs, 3 failures
-Finished in 0.003 seconds
+3 specs, 0 failures
+Finished in 0.004 seconds
 
 ```
 
@@ -453,43 +403,28 @@ Finished in 0.003 seconds
 
 <a name="translate"></a>
 
-## translate()
+## translate(str) ⇒ <code>string</code>
+It receives a string an turns the string in 'Pig Latin' language.
 
+
+**Returns**: <code>string</code> - newString - The 'translation' for Pig Latin.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| str | <code>string</code> | the string to be changed |
+
+**Example**  
+```js
+console.log(translate('eat pie')) // returns 'eatay iepay'
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F..F..F.
+...........................
 
-Failures:
-1) #translate translates a word beginning with a vowel
-.    Expected undefined to equal 'appleay'..
 
-2) #translate translates a word beginning with a consonant
-.    Expected undefined to equal 'ananabay'..
-
-3) #translate translates a word beginning with two consonants
-.    Expected undefined to equal 'errychay'..
-
-4) #translate translates two words
-.    Expected undefined to equal 'eatay iepay'..
-
-5) #translate translates a word beginning with three consonants
-.    Expected undefined to equal 'eethray'..
-
-6) #translate counts "sch" as a single phoneme
-.    Expected undefined to equal 'oolschay'..
-
-7) #translate counts "qu" as a single phoneme
-.    Expected undefined to equal 'ietquay'..
-
-8) #translate counts "qu" as a consonant even when its preceded by a consonant
-.    Expected undefined to equal 'aresquay'..
-
-9) #translate translates many words
-.    Expected undefined to equal 'ethay ickquay ownbray oxfay'..
-
-9 specs, 9 failures
-Finished in 0.007 seconds
+9 specs, 0 failures
+Finished in 0.009 seconds
 
 ```
 
@@ -502,34 +437,28 @@ Finished in 0.007 seconds
 
 <a name="snakeCase"></a>
 
-## snakeCase()
+## snakeCase(str) ⇒ <code>string</code>
+It receives a string an turns the string in snake case (snake_case)
 
+
+**Returns**: <code>string</code> - str - The string in snake case  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| str | <code>string</code> | the string to be changed |
+
+**Example**  
+```js
+console.log(snakeCase('SnAkE..CaSe..Is..AwEsOmE')) // returns 'snake_case_is_awesome'
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F.
+..................
 
-Failures:
-1) snakeCase works with simple lowercased phrases
-.    Expected undefined to equal 'hello_world'..
 
-2) snakeCase works with Caps and punctuation
-.    Expected undefined to equal 'hello_world'..
-
-3) snakeCase works with longer phrases
-.    Expected undefined to equal 'this_is_the_song_that_never_ends'..
-
-4) snakeCase works with camel case
-.    Expected undefined to equal 'snake_case'..
-
-5) snakeCase works with kebab case
-.    Expected undefined to equal 'snake_case'..
-
-6) snakeCase works with WTF case
-.    Expected undefined to equal 'snake_case_is_awesome'..
-
-6 specs, 6 failures
-Finished in 0.005 seconds
+6 specs, 0 failures
+Finished in 0.006 seconds
 
 ```
 
